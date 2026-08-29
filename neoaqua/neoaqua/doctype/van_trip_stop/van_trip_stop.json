@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "links": [],
+ "states": [],
+ "allow_rename": 0,
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "customer_name",
+  "sequence",
+  "status",
+  "stop_type",
+  "sales_order",
+  "cb_16",
+  "check_in",
+  "sales_invoice",
+  "invoice_amount",
+  "collected_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer",
+   "read_only": 1,
+   "in_list_view": 1,
+   "fetch_from": "customer.customer_name"
+  },
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "label": "Seq",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nVisited\nSkipped\nFailed",
+   "in_list_view": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "stop_type",
+   "label": "Stop Type",
+   "fieldtype": "Select",
+   "options": "Van Sale\nOrder Delivery\nCollection Only",
+   "in_list_view": 1,
+   "description": "Van Sale is decided at the door; Order Delivery fulfils an order taken at the office."
+  },
+  {
+   "fieldname": "sales_order",
+   "label": "Sales Order",
+   "fieldtype": "Link",
+   "options": "Sales Order"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_16"
+  },
+  {
+   "fieldname": "check_in",
+   "fieldtype": "Link",
+   "label": "Check In",
+   "options": "Salesman Check In",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Invoice",
+   "options": "Sales Invoice",
+   "in_list_view": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "invoice_amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "in_list_view": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "collected_amount",
+   "fieldtype": "Currency",
+   "label": "Collected",
+   "allow_on_submit": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 1,
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "Van Trip Stop",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

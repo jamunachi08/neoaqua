@@ -1,0 +1,182 @@
+{
+ "actions": [],
+ "links": [],
+ "states": [],
+ "allow_rename": 1,
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "zone_name",
+  "zone_type",
+  "company",
+  "cb_11",
+  "customer",
+  "territory",
+  "is_active",
+  "sb_circle",
+  "center_latitude",
+  "center_longitude",
+  "cb_12",
+  "radius_m",
+  "sb_polygon",
+  "points",
+  "sb_address",
+  "address_line",
+  "national_address_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "zone_name",
+   "fieldtype": "Data",
+   "label": "Zone Name",
+   "reqd": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "zone_type",
+   "fieldtype": "Select",
+   "label": "Zone Type",
+   "options": "Circle\nPolygon",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_11"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "in_list_view": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_circle",
+   "label": "Circle"
+  },
+  {
+   "fieldname": "center_latitude",
+   "fieldtype": "Float",
+   "label": "Center Latitude"
+  },
+  {
+   "fieldname": "center_longitude",
+   "fieldtype": "Float",
+   "label": "Center Longitude"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_12"
+  },
+  {
+   "fieldname": "radius_m",
+   "fieldtype": "Int",
+   "label": "Radius (metres)",
+   "in_list_view": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_polygon",
+   "label": "Polygon"
+  },
+  {
+   "fieldname": "points",
+   "fieldtype": "Table",
+   "label": "Polygon Points",
+   "options": "Geofence Point"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_address",
+   "label": "Address"
+  },
+  {
+   "fieldname": "address_line",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "national_address_code",
+   "fieldtype": "Data",
+   "label": "National Address Short Code"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "Geofence Zone",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NeoAqua Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "field:zone_name",
+ "title_field": "zone_name",
+ "show_title_field_in_link": 1
+}

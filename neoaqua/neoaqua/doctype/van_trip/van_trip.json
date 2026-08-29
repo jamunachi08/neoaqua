@@ -1,0 +1,387 @@
+{
+ "actions": [],
+ "links": [],
+ "states": [],
+ "allow_rename": 1,
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "trip_date",
+  "company",
+  "van",
+  "van_warehouse",
+  "route",
+  "cb_18",
+  "salesman",
+  "driver",
+  "status",
+  "shift",
+  "sb_odometer",
+  "odometer_start",
+  "start_time",
+  "cb_19",
+  "odometer_end",
+  "end_time",
+  "distance_km",
+  "sb_load_sheet",
+  "items",
+  "load_stock_entry",
+  "cb_20",
+  "return_stock_entry",
+  "sb_planned_stops",
+  "stops",
+  "sb_summary",
+  "total_loaded_value",
+  "total_invoiced",
+  "total_collected",
+  "cb_21",
+  "planned_stops",
+  "visited_stops",
+  "coverage_pct",
+  "sb_containers",
+  "containers_loaded",
+  "containers_delivered",
+  "cb_22",
+  "empties_collected",
+  "empties_returned_to_plant",
+  "sb_day_close",
+  "day_close",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NA-TRIP-.YYYY.-",
+   "reqd": 1,
+   "read_only": 1,
+   "hidden": 1,
+   "print_hide": 1
+  },
+  {
+   "fieldname": "trip_date",
+   "fieldtype": "Date",
+   "label": "Trip Date",
+   "options": ";",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "van",
+   "fieldtype": "Link",
+   "label": "Van",
+   "options": "Van",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "van_warehouse",
+   "fieldtype": "Link",
+   "label": "Van Warehouse",
+   "read_only": 1,
+   "fetch_from": "van.warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Link",
+   "label": "Route",
+   "options": "Van Route",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_18"
+  },
+  {
+   "fieldname": "salesman",
+   "fieldtype": "Link",
+   "label": "Salesman",
+   "options": "Sales Person",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Driver"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nLoaded\nIn Progress\nReturned\nClosed\nCancelled",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "Morning\nEvening\nFull Day"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_odometer",
+   "label": "Odometer"
+  },
+  {
+   "fieldname": "odometer_start",
+   "fieldtype": "Float",
+   "label": "Odometer Start"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Start Time"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_19"
+  },
+  {
+   "fieldname": "odometer_end",
+   "fieldtype": "Float",
+   "label": "Odometer End",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "label": "End Time",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "distance_km",
+   "fieldtype": "Float",
+   "label": "Distance (Km)",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_load_sheet",
+   "label": "Load Sheet"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Loaded Items",
+   "options": "Van Trip Item"
+  },
+  {
+   "fieldname": "load_stock_entry",
+   "fieldtype": "Link",
+   "label": "Load Stock Entry",
+   "options": "Stock Entry",
+   "read_only": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_20"
+  },
+  {
+   "fieldname": "return_stock_entry",
+   "fieldtype": "Link",
+   "label": "Return Stock Entry",
+   "options": "Stock Entry",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_planned_stops",
+   "label": "Planned Stops"
+  },
+  {
+   "fieldname": "stops",
+   "fieldtype": "Table",
+   "label": "Stops",
+   "options": "Van Trip Stop"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_summary",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "total_loaded_value",
+   "fieldtype": "Currency",
+   "label": "Total Loaded Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_invoiced",
+   "fieldtype": "Currency",
+   "label": "Total Invoiced",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "total_collected",
+   "fieldtype": "Currency",
+   "label": "Total Collected",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_21"
+  },
+  {
+   "fieldname": "planned_stops",
+   "fieldtype": "Int",
+   "label": "Planned Stops",
+   "read_only": 1
+  },
+  {
+   "fieldname": "visited_stops",
+   "fieldtype": "Int",
+   "label": "Visited Stops",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "coverage_pct",
+   "fieldtype": "Percent",
+   "label": "Coverage %",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_containers",
+   "label": "Containers"
+  },
+  {
+   "fieldname": "containers_loaded",
+   "fieldtype": "Int",
+   "label": "Full Containers Loaded"
+  },
+  {
+   "fieldname": "containers_delivered",
+   "fieldtype": "Int",
+   "label": "Delivered",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_22"
+  },
+  {
+   "fieldname": "empties_collected",
+   "fieldtype": "Int",
+   "label": "Empties Collected",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "empties_returned_to_plant",
+   "fieldtype": "Int",
+   "label": "Empties Returned to Plant",
+   "allow_on_submit": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_day_close",
+   "label": "Day Close"
+  },
+  {
+   "fieldname": "day_close",
+   "fieldtype": "Link",
+   "label": "Salesman Day Close",
+   "options": "Salesman Day Close",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Van Trip",
+   "read_only": 1,
+   "hidden": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "issingle": 0,
+ "istable": 0,
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "Van Trip",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NeoAqua Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "search_fields": "van,salesman,trip_date"
+}

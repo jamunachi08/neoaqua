@@ -1,0 +1,245 @@
+{
+ "actions": [],
+ "links": [],
+ "states": [],
+ "allow_rename": 1,
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rule_name",
+  "company",
+  "is_active",
+  "priority",
+  "cb_46",
+  "applies_to",
+  "item_code",
+  "item_group",
+  "production_line",
+  "sb_composition",
+  "default_separator",
+  "max_length",
+  "cb_47",
+  "force_uppercase",
+  "allow_manual_override",
+  "sb_segments",
+  "segments",
+  "sb_preview",
+  "sample_code",
+  "pattern",
+  "sb_expiry",
+  "set_expiry_from_shelf_life",
+  "cb_48",
+  "expiry_override_days",
+  "sb_notes",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "rule_name",
+   "fieldtype": "Data",
+   "label": "Rule Name",
+   "reqd": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Int",
+   "label": "Priority",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_46"
+  },
+  {
+   "fieldname": "applies_to",
+   "fieldtype": "Select",
+   "label": "Applies To",
+   "options": "All Items\nItem\nItem Group\nProduction Line",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "production_line",
+   "fieldtype": "Select",
+   "label": "Production Line",
+   "options": "Line 1 - Small PET\nLine 2 - Large PET\nLine 3 - 5 Gallon\nRO Plant",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_composition",
+   "label": "Composition"
+  },
+  {
+   "fieldname": "default_separator",
+   "fieldtype": "Data",
+   "label": "Default Separator"
+  },
+  {
+   "fieldname": "max_length",
+   "fieldtype": "Int",
+   "label": "Maximum Length"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_47"
+  },
+  {
+   "fieldname": "force_uppercase",
+   "fieldtype": "Check",
+   "label": "Force Uppercase"
+  },
+  {
+   "fieldname": "allow_manual_override",
+   "fieldtype": "Check",
+   "label": "Allow Manual Override"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_segments",
+   "label": "Segments"
+  },
+  {
+   "fieldname": "segments",
+   "fieldtype": "Table",
+   "label": "Segments",
+   "options": "Batch Naming Segment",
+   "reqd": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_preview",
+   "label": "Preview"
+  },
+  {
+   "fieldname": "sample_code",
+   "fieldtype": "Data",
+   "label": "Sample Batch Code",
+   "read_only": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "pattern",
+   "fieldtype": "Small Text",
+   "label": "Pattern",
+   "read_only": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_expiry",
+   "label": "Expiry"
+  },
+  {
+   "fieldname": "set_expiry_from_shelf_life",
+   "fieldtype": "Check",
+   "label": "Set Expiry from Item Shelf Life"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_48"
+  },
+  {
+   "fieldname": "expiry_override_days",
+   "fieldtype": "Int",
+   "label": "Expiry Override (days)"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_notes",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "Batch Naming Rule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NeoAqua Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "field:rule_name",
+ "title_field": "rule_name",
+ "show_title_field_in_link": 1,
+ "search_fields": "applies_to,item_code,item_group"
+}

@@ -1,0 +1,24 @@
+{
+ "content": null,
+ "creation": "2026-01-01 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "neoaqua-production-planner",
+ "owner": "Administrator",
+ "page_name": "neoaqua-production-planner",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "NeoAqua Manager"},
+  {"role": "Plant Operator"},
+  {"role": "Manufacturing User"},
+  {"role": "Manufacturing Manager"}
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "title": "Production Planner"
+}

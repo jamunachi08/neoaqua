@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "intro",
+  "sb_gen",
+  "company",
+  "demo_days",
+  "cb_gen",
+  "include_production",
+  "include_van_sales",
+  "include_procurement",
+  "sb_status",
+  "last_run_id",
+  "last_run_on",
+  "cb_status",
+  "records_created",
+  "run_log",
+  "sb_danger",
+  "danger",
+  "delete_masters_too",
+  "cb_danger",
+  "confirm_text"
+ ],
+ "fields": [
+  {
+   "fieldtype": "HTML",
+   "fieldname": "intro",
+   "options": "<div class='alert alert-info' style='margin-bottom:0'><b>Demo data</b> lets you exercise the whole app end to end &mdash; procurement, a five-level production run, van sales, day close and container deposits &mdash; on a fresh site. Every document created is logged, so it can all be removed again in one action.</div>"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_gen",
+   "label": "Generate"
+  },
+  {
+   "fieldname": "company",
+   "label": "Company",
+   "fieldtype": "Link",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "demo_days",
+   "label": "Days of History",
+   "fieldtype": "Int",
+   "default": 7,
+   "description": "How many days back the demo transactions are dated."
+  },
+  {
+   "fieldname": "cb_gen",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "include_production",
+   "label": "Include Production Run",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "include_van_sales",
+   "label": "Include Van Sales & Day Close",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "include_procurement",
+   "label": "Include Procure to Pay",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_status",
+   "label": "Last Run"
+  },
+  {
+   "fieldname": "last_run_id",
+   "label": "Last Run ID",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_run_on",
+   "label": "Last Run On",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_status",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "records_created",
+   "label": "Documents Created",
+   "fieldtype": "Int",
+   "read_only": 1
+  },
+  {
+   "fieldname": "run_log",
+   "label": "Run Log",
+   "fieldtype": "Code",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_danger",
+   "label": "Delete Demo Data"
+  },
+  {
+   "fieldtype": "HTML",
+   "fieldname": "danger",
+   "options": "<div class='alert alert-warning' style='margin-bottom:0'>Deletion cancels and removes every document created by the demo run, in reverse dependency order, together with its ledger entries. It only ever touches documents this tool created &mdash; anything you entered yourself is left alone.</div>"
+  },
+  {
+   "fieldname": "delete_masters_too",
+   "label": "Also Delete Demo Customers and Suppliers",
+   "fieldtype": "Check",
+   "description": "Leaves the seeded items, BOMs and warehouses in place - only the demo parties are removed."
+  },
+  {
+   "fieldname": "cb_danger",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "confirm_text",
+   "label": "Type DELETE to confirm",
+   "fieldtype": "Data"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 0,
+ "issingle": 1,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "NeoAqua Demo Tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NeoAqua Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

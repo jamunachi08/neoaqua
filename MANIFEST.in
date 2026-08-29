@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include neoaqua *.css
+recursive-include neoaqua *.csv
+recursive-include neoaqua *.html
+recursive-include neoaqua *.ico
+recursive-include neoaqua *.js
+recursive-include neoaqua *.json
+recursive-include neoaqua *.md
+recursive-include neoaqua *.png
+recursive-include neoaqua *.py
+recursive-include neoaqua *.svg
+recursive-include neoaqua *.txt
+recursive-exclude neoaqua *.pyc

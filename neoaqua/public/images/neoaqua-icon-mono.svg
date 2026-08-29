@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="NeoAqua">
+  <defs>
+    <clipPath id="mclip">
+      <path d="M32 3.5c0 0 21.5 21.6 21.5 35.2A21.5 21.5 0 0 1 10.5 38.7C10.5 25.1 32 3.5 32 3.5z"/>
+    </clipPath>
+  </defs>
+  <path d="M32 3.5c0 0 21.5 21.6 21.5 35.2A21.5 21.5 0 0 1 10.5 38.7C10.5 25.1 32 3.5 32 3.5z"
+        fill="none" stroke="currentColor" stroke-width="3.4"/>
+  <g clip-path="url(#mclip)">
+    <path d="M2 42c7.5 0 7.5-5.4 15-5.4S24.5 42 32 42s7.5-5.4 15-5.4S54.5 42 62 42v24H2z"
+          fill="currentColor" opacity="0.9"/>
+  </g>
+</svg>

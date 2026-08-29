@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "links": [],
+ "states": [],
+ "allow_rename": 0,
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "customer_name",
+  "sequence",
+  "visit_days",
+  "cb_9",
+  "geofence_zone",
+  "expected_duration",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1,
+   "in_list_view": 1,
+   "fetch_from": "customer.customer_name"
+  },
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "label": "Seq",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "visit_days",
+   "fieldtype": "Data",
+   "label": "Visit Days",
+   "in_list_view": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_9"
+  },
+  {
+   "fieldname": "geofence_zone",
+   "fieldtype": "Link",
+   "label": "Geofence Zone",
+   "options": "Geofence Zone"
+  },
+  {
+   "fieldname": "expected_duration",
+   "fieldtype": "Int",
+   "label": "Expected Duration (min)"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 1,
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "Van Route Stop",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

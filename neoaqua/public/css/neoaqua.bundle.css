@@ -1,0 +1,39 @@
+/* NeoAqua desk theming */
+:root {
+	--neoaqua-primary: #1b98e0;
+	--neoaqua-deep: #13293d;
+	--neoaqua-mist: #e8f4fb;
+}
+
+.neoaqua-kpi {
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+	margin: 8px 0 16px;
+}
+
+.neoaqua-kpi .tile {
+	flex: 1 1 160px;
+	background: var(--neoaqua-mist);
+	border-left: 3px solid var(--neoaqua-primary);
+	border-radius: 6px;
+	padding: 10px 14px;
+}
+
+.neoaqua-kpi .tile .label {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: .04em;
+	color: var(--text-muted);
+}
+
+.neoaqua-kpi .tile .value {
+	font-size: 20px;
+	font-weight: 600;
+	color: var(--neoaqua-deep);
+}
+
+.neoaqua-variance-short { color: var(--red-600); font-weight: 600; }
+.neoaqua-variance-over  { color: var(--blue-600); font-weight: 600; }
+
+[data-doctype="Van Trip"] .indicator-pill.blue { background: var(--neoaqua-mist); }

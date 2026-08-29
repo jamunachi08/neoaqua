@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="NeoAqua">
+  <defs>
+    <linearGradient id="sky" x1="20" y1="5" x2="44" y2="42" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5CC8F5"/><stop offset="1" stop-color="#1B98E0"/>
+    </linearGradient>
+    <linearGradient id="deep" x1="14" y1="40" x2="50" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1478B4"/><stop offset="1" stop-color="#13293D"/>
+    </linearGradient>
+    <clipPath id="dropClip">
+      <path d="M32 3.5c0 0 21.5 21.6 21.5 35.2A21.5 21.5 0 0 1 10.5 38.7C10.5 25.1 32 3.5 32 3.5z"/>
+    </clipPath>
+  </defs>
+
+  <path d="M32 3.5c0 0 21.5 21.6 21.5 35.2A21.5 21.5 0 0 1 10.5 38.7C10.5 25.1 32 3.5 32 3.5z" fill="url(#sky)"/>
+
+  <g clip-path="url(#dropClip)">
+    <!-- deep water fills the lower third, its surface a wave -->
+    <path d="M2 42c7.5 0 7.5-5.4 15-5.4S24.5 42 32 42s7.5-5.4 15-5.4S54.5 42 62 42v24H2z" fill="url(#deep)"/>
+    <!-- a single white crest riding the surface -->
+    <path d="M2 42c7.5 0 7.5-5.4 15-5.4S24.5 42 32 42s7.5-5.4 15-5.4S54.5 42 62 42"
+          fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" opacity="0.95"/>
+  </g>
+
+  <ellipse cx="24" cy="24.5" rx="3.4" ry="5.4" fill="#ffffff" opacity="0.4" transform="rotate(-22 24 24.5)"/>
+</svg>

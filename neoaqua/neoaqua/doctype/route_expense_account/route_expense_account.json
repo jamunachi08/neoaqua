@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "expense_type",
+  "expense_account",
+  "cost_center"
+ ],
+ "fields": [
+  {
+   "fieldname": "expense_type",
+   "label": "Expense Type",
+   "fieldtype": "Select",
+   "options": "Fuel\nToll / Salik\nParking\nVehicle Repair\nLoading Labour\nMeals\nMunicipality Fine\nOther",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "expense_account",
+   "label": "Expense Account",
+   "fieldtype": "Link",
+   "options": "Account",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cost_center",
+   "label": "Cost Center",
+   "fieldtype": "Link",
+   "options": "Cost Center",
+   "in_list_view": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "Route Expense Account",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

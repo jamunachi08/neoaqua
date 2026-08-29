@@ -1,0 +1,1 @@
+# frappe and erpnext are bench-managed dependencies

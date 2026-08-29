@@ -1,0 +1,281 @@
+{
+ "actions": [],
+ "links": [],
+ "states": [],
+ "allow_rename": 1,
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "check_type",
+  "posting_date",
+  "posting_time",
+  "company",
+  "cb_40",
+  "work_order",
+  "item_code",
+  "batch_no",
+  "production_line",
+  "shift",
+  "sb_parameters",
+  "parameters",
+  "sb_microbiology",
+  "total_plate_count",
+  "coliform",
+  "cb_41",
+  "pseudomonas",
+  "yeast_mould",
+  "sb_result",
+  "overall_result",
+  "inspected_by",
+  "cb_42",
+  "approved_by",
+  "sfda_reportable",
+  "corrective_action",
+  "lab_report",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NA-QC-.YYYY.-",
+   "reqd": 1,
+   "read_only": 1,
+   "hidden": 1,
+   "print_hide": 1
+  },
+  {
+   "fieldname": "check_type",
+   "fieldtype": "Select",
+   "label": "Check Type",
+   "options": "Source Water\nPost-RO\nPost-Ozonation\nIn-Process (Filler)\nFinished Goods\nRetention Sample",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "options": ";",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_40"
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "label": "Work Order",
+   "options": "Work Order",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "Batch",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "production_line",
+   "fieldtype": "Select",
+   "label": "Line",
+   "options": "Line 1 - Small PET\nLine 2 - Large PET\nLine 3 - 5 Gallon\nRO Plant",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "A\nB\nC"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_parameters",
+   "label": "Parameters"
+  },
+  {
+   "fieldname": "parameters",
+   "fieldtype": "Table",
+   "label": "Parameters",
+   "options": "Water Quality Parameter"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_microbiology",
+   "label": "Microbiology"
+  },
+  {
+   "fieldname": "total_plate_count",
+   "fieldtype": "Float",
+   "label": "Total Plate Count (CFU/ml)"
+  },
+  {
+   "fieldname": "coliform",
+   "fieldtype": "Select",
+   "label": "Total Coliform",
+   "options": "Absent\nPresent"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_41"
+  },
+  {
+   "fieldname": "pseudomonas",
+   "fieldtype": "Select",
+   "label": "Pseudomonas aeruginosa",
+   "options": "Absent\nPresent"
+  },
+  {
+   "fieldname": "yeast_mould",
+   "fieldtype": "Select",
+   "label": "Yeast & Mould",
+   "options": "Absent\nPresent"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_result",
+   "label": "Result"
+  },
+  {
+   "fieldname": "overall_result",
+   "fieldtype": "Select",
+   "label": "Overall Result",
+   "options": "Pass\nFail\nConditional Release",
+   "reqd": 1,
+   "in_list_view": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "inspected_by",
+   "fieldtype": "Link",
+   "label": "Inspected By",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_42"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "sfda_reportable",
+   "fieldtype": "Check",
+   "label": "SFDA Reportable"
+  },
+  {
+   "fieldname": "corrective_action",
+   "fieldtype": "Small Text",
+   "label": "Corrective Action"
+  },
+  {
+   "fieldname": "lab_report",
+   "fieldtype": "Attach",
+   "label": "Lab Report"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Water Quality Check",
+   "read_only": 1,
+   "hidden": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "issingle": 0,
+ "istable": 0,
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "Water Quality Check",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NeoAqua Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "naming_series:"
+}

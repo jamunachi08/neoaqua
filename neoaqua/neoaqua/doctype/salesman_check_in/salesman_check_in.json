@@ -1,0 +1,297 @@
+{
+ "actions": [],
+ "links": [],
+ "states": [],
+ "allow_rename": 1,
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "salesman",
+  "checkin_datetime",
+  "customer",
+  "customer_name",
+  "van_trip",
+  "cb_13",
+  "visit_purpose",
+  "visit_status",
+  "checkout_datetime",
+  "duration_minutes",
+  "sb_location",
+  "latitude",
+  "longitude",
+  "accuracy_m",
+  "cb_14",
+  "geofence_zone",
+  "distance_from_zone_m",
+  "within_geofence",
+  "geofence_override_reason",
+  "sb_result",
+  "sales_order",
+  "sales_invoice",
+  "payment_entry",
+  "cb_15",
+  "collected_amount",
+  "containers_delivered",
+  "containers_collected",
+  "sb_evidence",
+  "visit_photo",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NA-CHK-.YYYY.-",
+   "reqd": 1,
+   "read_only": 1,
+   "hidden": 1,
+   "print_hide": 1
+  },
+  {
+   "fieldname": "salesman",
+   "fieldtype": "Link",
+   "label": "Salesman",
+   "options": "Sales Person",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "checkin_datetime",
+   "fieldtype": "Datetime",
+   "label": "Check-in Time",
+   "options": ";",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1,
+   "fetch_from": "customer.customer_name"
+  },
+  {
+   "fieldname": "van_trip",
+   "fieldtype": "Link",
+   "label": "Van Trip",
+   "options": "Van Trip",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_13"
+  },
+  {
+   "fieldname": "visit_purpose",
+   "fieldtype": "Select",
+   "label": "Purpose",
+   "options": "Sale\nDelivery\nCollection\nContainer Pickup\nMerchandising\nComplaint\nProspecting",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "visit_status",
+   "fieldtype": "Select",
+   "label": "Outcome",
+   "options": "Draft\nSuccessful\nNo Order\nShop Closed\nCustomer Absent\nRejected",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "checkout_datetime",
+   "fieldtype": "Datetime",
+   "label": "Check-out Time"
+  },
+  {
+   "fieldname": "duration_minutes",
+   "fieldtype": "Float",
+   "label": "Duration (min)",
+   "read_only": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_location",
+   "label": "Location"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "options": ";",
+   "reqd": 1
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "options": ";",
+   "reqd": 1
+  },
+  {
+   "fieldname": "accuracy_m",
+   "fieldtype": "Float",
+   "label": "GPS Accuracy (m)"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_14"
+  },
+  {
+   "fieldname": "geofence_zone",
+   "fieldtype": "Link",
+   "label": "Geofence Zone",
+   "options": "Geofence Zone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "distance_from_zone_m",
+   "fieldtype": "Float",
+   "label": "Distance from Zone (m)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "within_geofence",
+   "fieldtype": "Check",
+   "label": "Within Geofence",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "geofence_override_reason",
+   "fieldtype": "Small Text",
+   "label": "Override Reason"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_result",
+   "label": "Result"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "payment_entry",
+   "fieldtype": "Link",
+   "label": "Payment Entry",
+   "options": "Payment Entry"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_15"
+  },
+  {
+   "fieldname": "collected_amount",
+   "fieldtype": "Currency",
+   "label": "Collected Amount"
+  },
+  {
+   "fieldname": "containers_delivered",
+   "fieldtype": "Int",
+   "label": "Containers Delivered"
+  },
+  {
+   "fieldname": "containers_collected",
+   "fieldtype": "Int",
+   "label": "Containers Collected"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_evidence",
+   "label": "Evidence"
+  },
+  {
+   "fieldname": "visit_photo",
+   "fieldtype": "Attach Image",
+   "label": "Visit Photo"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "issingle": 0,
+ "istable": 0,
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "Salesman Check In",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NeoAqua Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "search_fields": "salesman,customer,checkin_datetime"
+}

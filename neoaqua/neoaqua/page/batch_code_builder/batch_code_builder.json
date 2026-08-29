@@ -1,0 +1,24 @@
+{
+ "content": null,
+ "creation": "2026-01-01 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "batch-code-builder",
+ "owner": "Administrator",
+ "page_name": "batch-code-builder",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "NeoAqua Manager"},
+  {"role": "Plant Operator"},
+  {"role": "QC Inspector"},
+  {"role": "Item Manager"}
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "title": "Batch Code Builder"
+}

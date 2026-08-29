@@ -1,0 +1,495 @@
+{
+ "actions": [],
+ "links": [],
+ "states": [],
+ "allow_rename": 1,
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "posting_date",
+  "company",
+  "salesman",
+  "van",
+  "cb_30",
+  "van_trip",
+  "route",
+  "status",
+  "approved_by",
+  "sb_sales_recap",
+  "sales_invoices",
+  "total_sales",
+  "total_cash_sales",
+  "cb_31",
+  "total_credit_sales",
+  "total_returns",
+  "net_sales",
+  "sb_collections",
+  "collections",
+  "total_collections",
+  "cb_32",
+  "cash_collected",
+  "card_collected",
+  "transfer_collected",
+  "sb_expenses",
+  "expenses",
+  "total_expenses",
+  "sb_cash_reconciliation",
+  "opening_float",
+  "expected_cash",
+  "declared_cash",
+  "cb_33",
+  "cash_variance",
+  "variance_reason",
+  "variance_treatment",
+  "variance_account",
+  "sb_stock_reconciliation",
+  "stock_items",
+  "stock_variance_value",
+  "return_stock_entry",
+  "cb_34",
+  "damaged_stock_entry",
+  "sb_container_reconciliation",
+  "containers_issued",
+  "containers_returned_empty",
+  "cb_35",
+  "container_variance",
+  "sb_cash_deposit",
+  "deposit_mode",
+  "deposit_account",
+  "deposit_reference",
+  "cb_36",
+  "deposit_amount",
+  "journal_entry",
+  "deposit_attachment",
+  "sb_notes",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NA-DC-.YYYY.-",
+   "reqd": 1,
+   "read_only": 1,
+   "hidden": 1,
+   "print_hide": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "options": ";",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "salesman",
+   "fieldtype": "Link",
+   "label": "Salesman",
+   "options": "Sales Person",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "van",
+   "fieldtype": "Link",
+   "label": "Van",
+   "options": "Van",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_30"
+  },
+  {
+   "fieldname": "van_trip",
+   "fieldtype": "Link",
+   "label": "Van Trip",
+   "options": "Van Trip",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Link",
+   "label": "Route",
+   "options": "Van Route",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPending Approval\nApproved\nSettled\nDisputed",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_sales_recap",
+   "label": "Sales Recap"
+  },
+  {
+   "fieldname": "sales_invoices",
+   "fieldtype": "Table",
+   "label": "Invoices Raised",
+   "options": "Day Close Sales Item"
+  },
+  {
+   "fieldname": "total_sales",
+   "fieldtype": "Currency",
+   "label": "Total Sales",
+   "read_only": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "total_cash_sales",
+   "fieldtype": "Currency",
+   "label": "Cash Sales",
+   "read_only": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_31"
+  },
+  {
+   "fieldname": "total_credit_sales",
+   "fieldtype": "Currency",
+   "label": "Credit Sales",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_returns",
+   "fieldtype": "Currency",
+   "label": "Sales Returns",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_sales",
+   "fieldtype": "Currency",
+   "label": "Net Sales",
+   "read_only": 1,
+   "bold": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_collections",
+   "label": "Collections"
+  },
+  {
+   "fieldname": "collections",
+   "fieldtype": "Table",
+   "label": "Collections",
+   "options": "Day Close Collection"
+  },
+  {
+   "fieldname": "total_collections",
+   "fieldtype": "Currency",
+   "label": "Total Collections",
+   "read_only": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_32"
+  },
+  {
+   "fieldname": "cash_collected",
+   "fieldtype": "Currency",
+   "label": "Cash",
+   "read_only": 1
+  },
+  {
+   "fieldname": "card_collected",
+   "fieldtype": "Currency",
+   "label": "Card / Mada",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transfer_collected",
+   "fieldtype": "Currency",
+   "label": "Bank Transfer",
+   "read_only": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_expenses",
+   "label": "Expenses"
+  },
+  {
+   "fieldname": "expenses",
+   "fieldtype": "Table",
+   "label": "Route Expenses",
+   "options": "Day Close Expense"
+  },
+  {
+   "fieldname": "total_expenses",
+   "fieldtype": "Currency",
+   "label": "Total Expenses",
+   "read_only": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_cash_reconciliation",
+   "label": "Cash Reconciliation"
+  },
+  {
+   "fieldname": "opening_float",
+   "fieldtype": "Currency",
+   "label": "Opening Float"
+  },
+  {
+   "fieldname": "expected_cash",
+   "fieldtype": "Currency",
+   "label": "Expected Cash",
+   "read_only": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "declared_cash",
+   "fieldtype": "Currency",
+   "label": "Cash Declared by Salesman",
+   "options": ";",
+   "reqd": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_33"
+  },
+  {
+   "fieldname": "cash_variance",
+   "fieldtype": "Currency",
+   "label": "Cash Variance",
+   "read_only": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "variance_reason",
+   "fieldtype": "Small Text",
+   "label": "Variance Reason"
+  },
+  {
+   "fieldname": "variance_treatment",
+   "fieldtype": "Select",
+   "label": "Variance Treatment",
+   "options": "Ignore (within tolerance)\nRecover from Salesman\nWrite Off"
+  },
+  {
+   "fieldname": "variance_account",
+   "fieldtype": "Link",
+   "label": "Variance Account",
+   "options": "Account"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_stock_reconciliation",
+   "label": "Stock Reconciliation"
+  },
+  {
+   "fieldname": "stock_items",
+   "fieldtype": "Table",
+   "label": "Stock Return",
+   "options": "Day Close Stock Item"
+  },
+  {
+   "fieldname": "stock_variance_value",
+   "fieldtype": "Currency",
+   "label": "Stock Variance Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "return_stock_entry",
+   "fieldtype": "Link",
+   "label": "Return Stock Entry",
+   "options": "Stock Entry",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_34"
+  },
+  {
+   "fieldname": "damaged_stock_entry",
+   "fieldtype": "Link",
+   "label": "Damage Write-off Entry",
+   "options": "Stock Entry",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_container_reconciliation",
+   "label": "Container Reconciliation"
+  },
+  {
+   "fieldname": "containers_issued",
+   "fieldtype": "Int",
+   "label": "Full Containers Issued"
+  },
+  {
+   "fieldname": "containers_returned_empty",
+   "fieldtype": "Int",
+   "label": "Empties Returned"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_35"
+  },
+  {
+   "fieldname": "container_variance",
+   "fieldtype": "Int",
+   "label": "Container Variance",
+   "read_only": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_cash_deposit",
+   "label": "Cash Deposit"
+  },
+  {
+   "fieldname": "deposit_mode",
+   "fieldtype": "Select",
+   "label": "Deposit Mode",
+   "options": "Cash to Cashier\nBank Deposit\nRetained as Float"
+  },
+  {
+   "fieldname": "deposit_account",
+   "fieldtype": "Link",
+   "label": "Deposit To Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "deposit_reference",
+   "fieldtype": "Data",
+   "label": "Deposit Slip / Reference"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_36"
+  },
+  {
+   "fieldname": "deposit_amount",
+   "fieldtype": "Currency",
+   "label": "Amount Deposited"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "options": "Journal Entry",
+   "read_only": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "deposit_attachment",
+   "fieldtype": "Attach",
+   "label": "Deposit Slip"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_notes",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Salesman Day Close",
+   "read_only": 1,
+   "hidden": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "issingle": 0,
+ "istable": 0,
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "Salesman Day Close",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NeoAqua Manager",
+   "share": 1,
+   "write": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "search_fields": "salesman,van,posting_date"
+}

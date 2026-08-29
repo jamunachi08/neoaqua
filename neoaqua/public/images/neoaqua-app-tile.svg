@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="NeoAqua">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1B98E0"/><stop offset="1" stop-color="#13293D"/>
+    </linearGradient>
+    <clipPath id="tclip">
+      <path d="M256 96c0 0 116 116.6 116 190a116 116 0 0 1-232 0C140 212.6 256 96 256 96z"/>
+    </clipPath>
+  </defs>
+  <rect width="512" height="512" rx="114" fill="url(#bg)"/>
+  <path d="M256 96c0 0 116 116.6 116 190a116 116 0 0 1-232 0C140 212.6 256 96 256 96z" fill="#ffffff" opacity="0.97"/>
+  <g clip-path="url(#tclip)">
+    <path d="M120 304c40.5 0 40.5-29 81-29s40.5 29 81 29 40.5-29 81-29 40.5 29 81 29v130H120z" fill="#1B98E0"/>
+    <path d="M120 304c40.5 0 40.5-29 81-29s40.5 29 81 29 40.5-29 81-29 40.5 29 81 29"
+          fill="none" stroke="#13293D" stroke-width="11" stroke-linecap="round" opacity="0.35"/>
+  </g>
+</svg>

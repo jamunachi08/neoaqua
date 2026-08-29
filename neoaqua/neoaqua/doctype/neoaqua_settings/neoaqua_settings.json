@@ -1,0 +1,498 @@
+{
+ "actions": [],
+ "links": [],
+ "states": [],
+ "allow_rename": 0,
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sb_setup",
+  "setup_board",
+  "setup_completed",
+  "setup_company",
+  "cb_setup",
+  "setup_last_run",
+  "setup_report",
+  "sb_brand",
+  "brand_help",
+  "brand_name",
+  "brand_name_ar",
+  "cb_brand",
+  "brand_code",
+  "sb_company_defaults",
+  "company",
+  "default_plant_warehouse",
+  "rm_warehouse",
+  "cb_1",
+  "scrap_warehouse",
+  "van_parent_warehouse",
+  "cash_account",
+  "sb_van_sales",
+  "auto_create_load_stock_entry",
+  "block_sale_outside_route",
+  "allow_negative_van_stock",
+  "cb_2",
+  "require_day_close",
+  "cash_variance_tolerance",
+  "day_close_approver_role",
+  "sb_geofencing",
+  "enable_geofencing",
+  "default_geofence_radius",
+  "cb_3",
+  "geofence_enforcement",
+  "require_visit_photo",
+  "sb_returnable_containers",
+  "track_containers",
+  "container_item",
+  "cb_4",
+  "container_deposit_amount",
+  "container_deposit_account",
+  "sb_accounting",
+  "default_income_account",
+  "default_cogs_account",
+  "stock_damage_account",
+  "cb_accounting",
+  "cash_variance_account",
+  "cash_overage_account",
+  "distribution_cost_center",
+  "sb_route_exp",
+  "route_expense_accounts",
+  "sb_batching",
+  "auto_create_batch_on_work_order",
+  "plant_code",
+  "cb_batching",
+  "default_batch_naming_rule",
+  "print_batch_on_label",
+  "sb_production_qc",
+  "planning_hours_per_day",
+  "enforce_qc_before_fg_transfer",
+  "default_batch_shelf_life_days",
+  "cb_5",
+  "sfda_license_no",
+  "water_source_licence",
+  "sb_review",
+  "review_recipients",
+  "cb_review",
+  "review_day_of_month"
+ ],
+ "fields": [
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_setup",
+   "label": "Setup Status"
+  },
+  {
+   "fieldtype": "HTML",
+   "fieldname": "setup_board",
+   "options": "<div id='neoaqua-setup-board' class='text-muted'>Open this page to load the checklist.</div>"
+  },
+  {
+   "fieldname": "setup_completed",
+   "label": "Setup Completed",
+   "fieldtype": "Check",
+   "read_only": 1
+  },
+  {
+   "fieldname": "setup_company",
+   "label": "Setup Company",
+   "fieldtype": "Link",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_setup"
+  },
+  {
+   "fieldname": "setup_last_run",
+   "label": "Setup Last Run",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "setup_report",
+   "label": "Setup Report",
+   "fieldtype": "Code",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_brand",
+   "label": "Brand"
+  },
+  {
+   "fieldtype": "HTML",
+   "fieldname": "brand_help",
+   "options": "<div class='text-muted small'>The brand is used to name every finished-goods item, for example <b>&lt;brand&gt; 600 ml Bottle</b>. Item codes never contain it, so the brand can be changed later without affecting any transaction, BOM or batch.</div>"
+  },
+  {
+   "fieldname": "brand_name",
+   "label": "Brand Name",
+   "fieldtype": "Data",
+   "reqd": 0,
+   "description": "Set this before running the plant setup."
+  },
+  {
+   "fieldname": "brand_name_ar",
+   "label": "\u0627\u0633\u0645 \u0627\u0644\u0639\u0644\u0627\u0645\u0629 \u0627\u0644\u062a\u062c\u0627\u0631\u064a\u0629",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_brand"
+  },
+  {
+   "fieldname": "brand_code",
+   "label": "Brand Short Code",
+   "fieldtype": "Data",
+   "length": 8,
+   "description": "Used by batch numbering. Derived from the brand name when left empty."
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_company_defaults",
+   "label": "Company & Defaults"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_plant_warehouse",
+   "fieldtype": "Link",
+   "label": "Plant / FG Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "rm_warehouse",
+   "fieldtype": "Link",
+   "label": "Raw Material Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_1"
+  },
+  {
+   "fieldname": "scrap_warehouse",
+   "fieldtype": "Link",
+   "label": "Scrap / Rejection Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "van_parent_warehouse",
+   "fieldtype": "Link",
+   "label": "Van Parent Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "cash_account",
+   "fieldtype": "Link",
+   "label": "Salesman Cash Account",
+   "options": "Account"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_van_sales",
+   "label": "Van Sales"
+  },
+  {
+   "fieldname": "auto_create_load_stock_entry",
+   "fieldtype": "Check",
+   "label": "Auto-submit Load Stock Entry"
+  },
+  {
+   "fieldname": "block_sale_outside_route",
+   "fieldtype": "Check",
+   "label": "Block Invoice for Off-Route Customer"
+  },
+  {
+   "fieldname": "allow_negative_van_stock",
+   "fieldtype": "Check",
+   "label": "Allow Negative Van Stock"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_2"
+  },
+  {
+   "fieldname": "require_day_close",
+   "fieldtype": "Check",
+   "label": "Require Day Close before next Trip"
+  },
+  {
+   "fieldname": "cash_variance_tolerance",
+   "fieldtype": "Currency",
+   "label": "Cash Variance Tolerance (SAR)"
+  },
+  {
+   "fieldname": "day_close_approver_role",
+   "fieldtype": "Link",
+   "label": "Day Close Approver Role",
+   "options": "Role"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_geofencing",
+   "label": "Geofencing"
+  },
+  {
+   "fieldname": "enable_geofencing",
+   "fieldtype": "Check",
+   "label": "Enable Geofencing"
+  },
+  {
+   "fieldname": "default_geofence_radius",
+   "fieldtype": "Int",
+   "label": "Default Radius (metres)"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_3"
+  },
+  {
+   "fieldname": "geofence_enforcement",
+   "fieldtype": "Select",
+   "label": "Enforcement",
+   "options": "Warn Only\nBlock Check-in\nBlock Invoice"
+  },
+  {
+   "fieldname": "require_visit_photo",
+   "fieldtype": "Check",
+   "label": "Require Visit Photo"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_returnable_containers",
+   "label": "Returnable Containers"
+  },
+  {
+   "fieldname": "track_containers",
+   "fieldtype": "Check",
+   "label": "Track Returnable Containers (5 Gal)"
+  },
+  {
+   "fieldname": "container_item",
+   "fieldtype": "Link",
+   "label": "Empty Container Item",
+   "options": "Item"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_4"
+  },
+  {
+   "fieldname": "container_deposit_amount",
+   "fieldtype": "Currency",
+   "label": "Deposit per Container (SAR)"
+  },
+  {
+   "fieldname": "container_deposit_account",
+   "fieldtype": "Link",
+   "label": "Container Deposit Liability Account",
+   "options": "Account"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_accounting",
+   "label": "Accounting"
+  },
+  {
+   "fieldname": "default_income_account",
+   "label": "Default Income Account",
+   "fieldtype": "Link",
+   "options": "Account"
+  },
+  {
+   "fieldname": "default_cogs_account",
+   "label": "Default COGS Account",
+   "fieldtype": "Link",
+   "options": "Account"
+  },
+  {
+   "fieldname": "stock_damage_account",
+   "label": "Stock Damage / Scrap Account",
+   "fieldtype": "Link",
+   "options": "Account"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_accounting"
+  },
+  {
+   "fieldname": "cash_variance_account",
+   "label": "Cash Shortage Account",
+   "fieldtype": "Link",
+   "options": "Account"
+  },
+  {
+   "fieldname": "cash_overage_account",
+   "label": "Cash Overage Account",
+   "fieldtype": "Link",
+   "options": "Account"
+  },
+  {
+   "fieldname": "distribution_cost_center",
+   "label": "Distribution Cost Center",
+   "fieldtype": "Link",
+   "options": "Cost Center"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_route_exp",
+   "label": "Route Expense Accounts"
+  },
+  {
+   "fieldname": "route_expense_accounts",
+   "label": "Route Expense Accounts",
+   "fieldtype": "Table",
+   "options": "Route Expense Account",
+   "description": "Defaults the account on every Day Close Expense row by expense type."
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_batching",
+   "label": "Batch Numbering"
+  },
+  {
+   "fieldname": "auto_create_batch_on_work_order",
+   "label": "Reserve Batch at Work Order Submit",
+   "fieldtype": "Check",
+   "description": "Creates the batch up front so quality can test before the finished goods transfer."
+  },
+  {
+   "fieldname": "plant_code",
+   "label": "Plant / Site Code",
+   "fieldtype": "Data",
+   "length": 6
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_batching"
+  },
+  {
+   "fieldname": "default_batch_naming_rule",
+   "label": "Fallback Batch Naming Rule",
+   "fieldtype": "Link",
+   "options": "Batch Naming Rule"
+  },
+  {
+   "fieldname": "print_batch_on_label",
+   "label": "Print Batch Code on Label",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_production_qc",
+   "label": "Production & QC"
+  },
+  {
+   "fieldname": "planning_hours_per_day",
+   "label": "Planning Hours per Day",
+   "fieldtype": "Float",
+   "default": "16",
+   "description": "Available line hours per working day, used by the production planner capacity check."
+  },
+  {
+   "fieldname": "enforce_qc_before_fg_transfer",
+   "fieldtype": "Check",
+   "label": "Block FG Transfer without Passed QC"
+  },
+  {
+   "fieldname": "default_batch_shelf_life_days",
+   "fieldtype": "Int",
+   "label": "Default Shelf Life (days)"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_5"
+  },
+  {
+   "fieldname": "sfda_license_no",
+   "fieldtype": "Data",
+   "label": "SFDA Licence No"
+  },
+  {
+   "fieldname": "water_source_licence",
+   "fieldtype": "Data",
+   "label": "Water Source Licence No"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_review",
+   "label": "Management Reporting"
+  },
+  {
+   "fieldname": "review_recipients",
+   "label": "Monthly Review Recipients",
+   "fieldtype": "Small Text",
+   "description": "Comma separated. Leave empty to disable the automatic monthly email."
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_review"
+  },
+  {
+   "fieldname": "review_day_of_month",
+   "label": "Send on Day of Month",
+   "fieldtype": "Int",
+   "default": "3"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 1,
+ "istable": 0,
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "NeoAqua Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NeoAqua Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

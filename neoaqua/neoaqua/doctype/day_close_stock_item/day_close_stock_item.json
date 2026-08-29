@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "links": [],
+ "states": [],
+ "allow_rename": 0,
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "loaded_qty",
+  "sold_qty",
+  "cb_29",
+  "returned_qty",
+  "damaged_qty",
+  "variance_qty",
+  "valuation_rate",
+  "variance_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1,
+   "fetch_from": "item_code.item_name"
+  },
+  {
+   "fieldname": "loaded_qty",
+   "fieldtype": "Float",
+   "label": "Loaded",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sold_qty",
+   "fieldtype": "Float",
+   "label": "Sold",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_29"
+  },
+  {
+   "fieldname": "returned_qty",
+   "fieldtype": "Float",
+   "label": "Returned",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "damaged_qty",
+   "fieldtype": "Float",
+   "label": "Damaged",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "variance_qty",
+   "fieldtype": "Float",
+   "label": "Short / Excess",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "valuation_rate",
+   "fieldtype": "Currency",
+   "label": "Rate",
+   "read_only": 1,
+   "print_hide": 1
+  },
+  {
+   "fieldname": "variance_value",
+   "fieldtype": "Currency",
+   "label": "Variance Value",
+   "read_only": 1,
+   "in_list_view": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 1,
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "Day Close Stock Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

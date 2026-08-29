@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "links": [],
+ "states": [],
+ "allow_rename": 0,
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "segment_type",
+  "fixed_text",
+  "length",
+  "pad_char",
+  "cb_44",
+  "transform",
+  "separator_after",
+  "counter_scope",
+  "counter_start",
+  "sb_source",
+  "source_doctype",
+  "source_fieldname",
+  "cb_45",
+  "fallback",
+  "is_mandatory",
+  "sb_value_mapping",
+  "use_value_map",
+  "value_map",
+  "segment_preview"
+ ],
+ "fields": [
+  {
+   "fieldname": "segment_type",
+   "fieldtype": "Select",
+   "label": "Segment Type",
+   "options": "Fixed Text\nItem Code\nItem Batch Code\nItem Group Code\nFill Volume\nProduction Line Code\nShift Code\nPlant Code\nCompany Abbreviation\nYear (YY)\nYear (YYYY)\nMonth (MM)\nMonth (Letter A-L)\nDay (DD)\nJulian Day (DDD)\nWeek (WW)\nDate (YYMMDD)\nExpiry Year (YY)\nExpiry Month (MM)\nExpiry Day (DD)\nExpiry (YYMMDD)\nWork Order Suffix\nSequence Counter\nCustom Field",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "fixed_text",
+   "fieldtype": "Data",
+   "label": "Fixed Text",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "length",
+   "fieldtype": "Int",
+   "label": "Length",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "pad_char",
+   "fieldtype": "Data",
+   "label": "Pad"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_44"
+  },
+  {
+   "fieldname": "transform",
+   "fieldtype": "Select",
+   "label": "Transform",
+   "options": "None\nUPPERCASE\nlowercase\nStrip Non-Alphanumeric"
+  },
+  {
+   "fieldname": "separator_after",
+   "fieldtype": "Data",
+   "label": "Separator After",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "counter_scope",
+   "fieldtype": "Select",
+   "label": "Counter Scope",
+   "options": "Global\nPer Year\nPer Month\nPer Day\nPer Item\nPer Item per Day\nPer Line per Day\nPer Line per Shift per Day"
+  },
+  {
+   "fieldname": "counter_start",
+   "fieldtype": "Int",
+   "label": "Counter Starts At"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_source",
+   "label": "Source"
+  },
+  {
+   "fieldname": "source_doctype",
+   "fieldtype": "Select",
+   "label": "Source DocType",
+   "options": "Item\nWork Order\nBatch\nStock Entry"
+  },
+  {
+   "fieldname": "source_fieldname",
+   "fieldtype": "Data",
+   "label": "Source Fieldname"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_45"
+  },
+  {
+   "fieldname": "fallback",
+   "fieldtype": "Data",
+   "label": "Fallback if Empty"
+  },
+  {
+   "fieldname": "is_mandatory",
+   "fieldtype": "Check",
+   "label": "Fail if Empty"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_value_mapping",
+   "label": "Value Mapping"
+  },
+  {
+   "fieldname": "use_value_map",
+   "fieldtype": "Check",
+   "label": "Use Value Map"
+  },
+  {
+   "fieldname": "value_map",
+   "fieldtype": "Table",
+   "label": "Value Map",
+   "options": "Batch Segment Value Map"
+  },
+  {
+   "fieldname": "segment_preview",
+   "fieldtype": "Data",
+   "label": "Preview",
+   "read_only": 1,
+   "in_list_view": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 1,
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "Batch Naming Segment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

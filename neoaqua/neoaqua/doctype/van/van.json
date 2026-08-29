@@ -1,0 +1,201 @@
+{
+ "actions": [],
+ "links": [],
+ "states": [],
+ "allow_rename": 1,
+ "creation": "2026-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "van_name",
+  "plate_number",
+  "company",
+  "status",
+  "cb_6",
+  "salesman",
+  "driver",
+  "employee",
+  "istimara_expiry",
+  "sb_stock_billing",
+  "warehouse",
+  "pos_profile",
+  "cb_7",
+  "cost_center",
+  "default_route",
+  "sb_capacity",
+  "max_weight_kg",
+  "cb_8",
+  "max_cases"
+ ],
+ "fields": [
+  {
+   "fieldname": "van_name",
+   "fieldtype": "Data",
+   "label": "Van Name",
+   "options": ";",
+   "reqd": 1,
+   "bold": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "plate_number",
+   "fieldtype": "Data",
+   "label": "Plate Number (\u0644\u0648\u062d\u0629)",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nUnder Maintenance\nDisabled",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_6"
+  },
+  {
+   "fieldname": "salesman",
+   "fieldtype": "Link",
+   "label": "Default Salesman",
+   "options": "Sales Person",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Driver"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Salesman Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "istimara_expiry",
+   "fieldtype": "Date",
+   "label": "Istimara Expiry"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_stock_billing",
+   "label": "Stock & Billing"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Van Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pos_profile",
+   "fieldtype": "Link",
+   "label": "POS Profile",
+   "options": "POS Profile"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_7"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "default_route",
+   "fieldtype": "Link",
+   "label": "Default Route",
+   "options": "Van Route"
+  },
+  {
+   "fieldtype": "Section Break",
+   "fieldname": "sb_capacity",
+   "label": "Capacity"
+  },
+  {
+   "fieldname": "max_weight_kg",
+   "fieldtype": "Float",
+   "label": "Max Payload (Kg)"
+  },
+  {
+   "fieldtype": "Column Break",
+   "fieldname": "cb_8"
+  },
+  {
+   "fieldname": "max_cases",
+   "fieldtype": "Int",
+   "label": "Max Cases"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "modified": "2026-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "NeoAqua",
+ "name": "Van",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NeoAqua Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "autoname": "field:van_name",
+ "title_field": "van_name",
+ "show_title_field_in_link": 1,
+ "search_fields": "plate_number,salesman"
+}

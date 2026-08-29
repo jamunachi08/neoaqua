@@ -1,0 +1,11 @@
+[pre_model_sync]
+
+[post_model_sync]
+neoaqua.patches.v15_0.create_neoaqua_roles
+neoaqua.patches.v15_0.install_custom_fields
+neoaqua.patches.v15_1.seed_batch_naming_rules
+neoaqua.patches.v15_1_1.rebuild_dashboard_artifacts
+neoaqua.patches.v15_2.setup_accounting_defaults
+neoaqua.patches.v15_5.rename_brand_to_neo_aqua
+neoaqua.patches.v15_6.backfill_brand_setting
+neoaqua.patches.v15_9.repair_workspaces_and_names

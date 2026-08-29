@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+# NeoAqua pre-commit guard.
+#
+# Install once per clone:
+#     git config core.hooksPath .githooks
+#     chmod +x .githooks/pre-commit
+#
+# Blocks a commit that would be rejected by the Frappe Cloud image build:
+# unresolved merge markers, syntax errors, undefined names, broken patch
+# entries, bad doctype links.
+
+set -u
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT" || exit 0
+
+FAILED=0
+
+# 1. conflict markers in anything being committed
+STAGED="$(git diff --cached --name-only --diff-filter=ACM)"
+if [ -n "$STAGED" ]; then
+  while IFS= read -r file; do
+    [ -f "$file" ] || continue
+    if grep -nE '^(<{7}|={7}|>{7}|\|{7})( |$)' "$file" >/dev/null 2>&1; then
+      echo "BLOCKED: unresolved merge conflict markers in $file"
+      grep -nE '^(<{7}|={7}|>{7}|\|{7})( |$)' "$file" | head -5
+      FAILED=1
+    fi
+  done <<< "$STAGED"
+fi
+
+# 2. python must at least compile
+while IFS= read -r file; do
+  case "$file" in
+    *.py)
+      [ -f "$file" ] || continue
+      if ! python3 -m py_compile "$file" 2>/dev/null; then
+        echo "BLOCKED: $file does not compile"
+        python3 -m py_compile "$file"
+        FAILED=1
+      fi
+      ;;
+  esac
+done <<< "$STAGED"
+
+# 3. full structural guard
+if [ -f verify_tree.py ]; then
+  if ! python3 verify_tree.py; then
+    echo "BLOCKED: verify_tree.py reported problems"
+    FAILED=1
+  fi
+fi
+
+if [ "$FAILED" -ne 0 ]; then
+  echo ""
+  echo "Commit aborted. Fix the above, or bypass deliberately with --no-verify."
+  exit 1
+fi
+exit 0
